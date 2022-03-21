@@ -79,7 +79,6 @@ export const editPost = (id, newPost) => updateDoc(doc(db, 'posts', id), newPost
 // obtener un post
 export const getPost = (id) => getDoc(doc(db, 'posts', id));
 
-
 // Manipula interacción de los likes de posteos
 // export const setLikes = async (postId, dataLikes) => {
 //     const postRef = doc(db, 'posts', postId);
