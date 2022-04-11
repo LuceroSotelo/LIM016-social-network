@@ -8,7 +8,7 @@ import { emailMessage, signUp } from '../firebase/firebase-auth.js';
 import { addUserInfo } from '../firebase/firebase-data.js';
 
 export default () => {
-    const viewRegistration = `
+    const viewRegistration = /* html */`
     <section id="principalView1">
     <h1 class="nameSocialNetwork">VIAJA PE</h1>
     <img class="logo1" src="img/airplane.png" />
@@ -45,7 +45,8 @@ export default () => {
 
 <div class="termsAndConditions-hidden">
     <div class="termsAndConditions-modal">
-        <header> Términos y condiciones de uso
+        <header>  
+            <div> Términos y condiciones de uso </div>
             <div class="btn-close"><i class="fa-solid fa-xmark"></i></div>
         </header>
 

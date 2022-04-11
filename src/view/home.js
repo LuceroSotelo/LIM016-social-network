@@ -94,7 +94,7 @@ export default () => {
                 let html = '';
                 querySnapshot.forEach((docu) => {
                     const dataPost = docu.data();
-                    html += `
+                    html += /* html */ `
                     <div class="publication">
                         <div class="headPublication">
                             <div class="photoAndName">
@@ -108,10 +108,10 @@ export default () => {
                             </div>
                             <div class="edit show"  id="${dataPost.userId}">
                                 <i class="fa-solid fa-ellipsis-vertical" id=${docu.id}></i>
-                                <div class="hidden options">
+                                <li class="hidden options">
                                     <ul class="optionDelete">Eliminar</ul>
                                     <ul class="optionEdit" data-id="${docu.id}">Editar</ul>
-                                </div>
+                                </li>
                             </div>
                         </div>
                         <div class="bodyPublication" id=${docu.id}>${dataPost.textPost}</div>
@@ -144,9 +144,11 @@ export default () => {
                 btnsEdit.forEach((btn) => {
                     btn.addEventListener('click', (e) => {
                         const divHidden = e.target.nextElementSibling;
+                        const ulOptions = e.target.nextElementSibling;
                         const status = divHidden.getAttribute('class');
                         if (status.includes('hidden')) {
                             divHidden.setAttribute('class', 'show');
+                            ulOptions.setAttribute('class', 'options');
                             // Opcion a eliminar
                             const optionDelete = e.target.nextElementSibling.firstElementChild;
                             const modal = document.querySelector('.containerModal');

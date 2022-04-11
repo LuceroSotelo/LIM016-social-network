@@ -106,7 +106,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--nav-color);
+	background-color: #F3E4DC;
 	border-radius: 15px;
 	height: 4vh;
 	width: 80vw;
@@ -118,14 +118,21 @@ body {
 }
 
 /* Ocultar opciones de edicion de una publicacion */
-.hidde {
+.hidden {
 	display: none;
 }
 
 /* Mostrar opciones de edicion de una publicacion */
 .show {
-	display: flex;
 	flex-direction: column;
+    position: absolute;
+    right: 6.5%;
+    list-style: none;
+    margin-top: -6%;
+}
+
+.options {
+	background-color: aqua;
 }
 
 /* Alinear contenedor de posts */
@@ -144,6 +151,9 @@ body {
 	background: var(--background-color);
 	border-radius: 15px;
 	margin-top: 15px;
+	padding-right: 8%;
+	padding-top: 3%;
+	padding-left: 1%;
 }
 
 /* Alinear horizontal cabecera de post */
@@ -170,6 +180,9 @@ body {
 /* Alinear icono de editar post */
 .fa-ellipsis-vertical {
 	margin-right: 8px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100%;
 }
 
 /* Estilo a texto del post */
@@ -211,7 +224,8 @@ body {
 	height: 100vh;
 	width: 100vw;
 	display: flex;
-	opacity: 0; /* OCULTAR MODAL AL INICIO */
+	opacity: 0;
+	/* OCULTAR MODAL AL INICIO */
 }
 
 /* Modal */
@@ -307,5 +321,22 @@ body {
 
 	.iconBar {
 		cursor: pointer;
+	}
+
+	/* Post */
+	.publication {
+		display: flex;
+		flex-direction: column;
+		border: transparent;
+		width: 80vw;
+		background: var(--background-color);
+		border-radius: 15px;
+	}
+
+	/* Alinear icono de editar post */
+	.fa-ellipsis-vertical {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 100%;
 	}
 }
