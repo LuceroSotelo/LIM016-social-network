@@ -131,10 +131,6 @@ body {
     margin-top: -6%;
 }
 
-.options {
-	background-color: aqua;
-}
-
 /* Alinear contenedor de posts */
 .postContainer {
 	display: flex;
